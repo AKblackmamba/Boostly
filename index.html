@@ -25,7 +25,7 @@
       padding: 3rem 2rem;
       text-align: center;
       position: relative;
-      background-image: url('hero-background.png');
+      background-image: url('./hero-background.png');
       background-size: cover;
       background-position: center;
     }
@@ -155,7 +155,87 @@
 </head>
 <body>
   <header>
-    <img src="logo-boostly.png" alt="Boostly Logo" class="logo">
+    <img src="./logo-boostly.png" alt="Boostly Logo" class="logo">
     <h1>Boostly</h1>
     <p>L’agence marketing 360° pour booster votre notoriété digitale</p>
   </header>
+
+  <nav>
+    <a href="#projet">Projet</a>
+    <a href="#equipe">Équipe</a>
+    <a href="#objectifs">Objectifs</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="projet">
+    <div class="card">
+      <h2>Notre projet</h2>
+      <p>Boostly est une agence de marketing fondée par des étudiants d’EM Lyon. Elle accompagne les entreprises dans leur développement digital grâce à une approche 360° : branding, réseaux sociaux, création de site et analyse des performances.</p>
+    </div>
+  </section>
+
+  <section class="section" id="equipe">
+    <div class="card">
+      <h2>L'équipe</h2>
+      <div class="team-member"><strong>Blanche Marchal</strong> – KPIs, stratégie marketing</div>
+      <div class="team-member"><strong>Daniel Razafindrabe</strong> – Développement web</div>
+      <div class="team-member"><strong>Anthony El Khoury</strong> – UX/UI, contenus, stratégie</div>
+      <div class="team-member"><strong>Jean Miri Laurent</strong> – Organisation, CRM</div>
+      <div class="team-member"><strong>Roméo Medina</strong> – Relation client</div>
+      <div class="team-member"><strong>Alexandre Dubosc</strong> – Réseaux sociaux</div>
+    </div>
+  </section>
+
+  <section class="section" id="objectifs">
+    <h2>Objectifs</h2>
+    <ul>
+      <li>Optimiser la présence digitale</li>
+      <li>Créer un business plan solide</li>
+      <li>Développer des stratégies de contenu efficaces</li>
+    </ul>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Nos services</h2>
+    <ul>
+      <li>Sites web performants</li>
+      <li>Gestion réseaux sociaux & influence</li>
+      <li>Branding & storytelling</li>
+      <li>Analyse des performances (KPIs)</li>
+    </ul>
+    <a class="btn" href="mailto:hello@boostly.fr?subject=Demande%20de%20rendez-vous">Prendre rendez-vous</a>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="./hero-background.png" alt="Projet 1">
+        <h3>Refonte site PME</h3>
+        <p>Site + SEO + stratégie B2B</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
+        <h3>Brand TikTok Fashion</h3>
+        <p>Storytelling & influence</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Nous contacter</h2>
+    <form action="mailto:hello@boostly.fr" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <input type="submit" value="Envoyer">
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Boostly – Propulsé par l’équipe Makers EM Lyon
+  </footer>
+</body>
+</html>
