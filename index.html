@@ -12,29 +12,53 @@
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #111, #333);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
       text-align: center;
       padding: 4rem 2rem;
+      background-image: url('A_professional_digital_photograph_captures_a_moder.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.75);
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin: 0;
+      letter-spacing: 1px;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 1rem;
+      color: #cbd5e1;
     }
     nav {
-      background: #2f2f2f;
+      background: #1e293b;
       text-align: center;
       padding: 1rem 0;
     }
     nav a {
-      color: white;
+      color: #f1f5f9;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #38bdf8;
     }
     .section {
       padding: 3rem 1.5rem;
@@ -46,10 +70,6 @@
       margin-bottom: 1rem;
       color: #1e1e1e;
       text-align: center;
-    }
-    .section p, .section ul {
-      font-size: 1.05rem;
-      line-height: 1.6;
     }
     .card {
       background: #fff;
@@ -64,7 +84,7 @@
     .btn {
       display: inline-block;
       padding: 0.8rem 1.6rem;
-      background-color: #1e1e1e;
+      background-color: #1e293b;
       color: white;
       border-radius: 8px;
       text-decoration: none;
@@ -103,7 +123,7 @@
       font-size: 1rem;
     }
     input[type="submit"] {
-      background-color: #1e1e1e;
+      background-color: #1e293b;
       color: white;
       font-weight: bold;
       cursor: pointer;
@@ -183,7 +203,7 @@
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="boostly-project1.jpg" alt="Projet 1">
+        <img src="A_professional_digital_photograph_captures_a_moder.png" alt="Projet 1">
         <h3>Refonte site web PME</h3>
         <p>Optimisation UX, SEO et conversion pour une entreprise B2B</p>
       </div>
