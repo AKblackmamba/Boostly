@@ -3,162 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neutrapack - Patch anti-odeur</title>
+  <title>Boostly - Agence Marketing Digitale</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f1eb;
-      color: #2e2e2e;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
-      background-color: #e0d2bd;
-      padding: 2rem;
+      background: linear-gradient(135deg, #111, #333);
+      color: white;
       text-align: center;
+      padding: 4rem 2rem;
     }
     header h1 {
+      font-size: 3rem;
       margin: 0;
-      font-size: 2.5rem;
-      font-weight: bold;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+    header p {
+      font-size: 1.2rem;
       margin-top: 1rem;
     }
+    nav {
+      background: #2f2f2f;
+      text-align: center;
+      padding: 1rem 0;
+    }
     nav a {
+      color: white;
+      margin: 0 1rem;
       text-decoration: none;
-      color: #2e2e2e;
       font-weight: bold;
     }
-    .hero, .section {
-      text-align: center;
-      padding: 2rem;
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
-    .hero img {
-      max-width: 300px;
-      margin: 1rem auto;
-      display: block;
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1e1e1e;
     }
-    .paypal img {
-      width: 100px;
+    .section p, .section ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
-    .cart {
-      max-width: 400px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    .team-member {
+      margin-bottom: 1rem;
     }
-    .cart input {
-      width: 60px;
-      padding: 0.3rem;
-      font-size: 1rem;
-      margin: 0.5rem;
-    }
-    .cart button {
-      background-color: #a25f2a;
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #1e1e1e;
       color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
       border-radius: 8px;
-      margin: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
     }
-    .cart button:hover {
-      background-color: #8a4e1f;
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .portfolio-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #1e1e1e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
     }
     footer {
-      background-color: #e0d2bd;
+      background: #eee;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
-  <script>
-    function updateCart() {
-      const quantity = parseInt(document.getElementById('quantity').value) || 0;
-      const unitPrice = 2;
-      const total = quantity * unitPrice;
-      const shipping = total > 35 ? 0 : 4.99;
-      const totalPrice = total + shipping;
-      document.getElementById('total').innerText = totalPrice.toFixed(2) + ' €';
-      document.getElementById('paypalAmount').value = totalPrice.toFixed(2);
-    }
-
-    function sendOrderEmail() {
-      const quantity = document.getElementById('quantity').value;
-      const total = document.getElementById('total').innerText;
-      const mailto = `mailto:hello@neutrapack.com?subject=Nouvelle commande Neutrapack&body=Commande de ${quantity} patch(s). Total: ${total}`;
-      window.location.href = mailto;
-    }
-  </script>
 </head>
 <body>
   <header>
-    <h1>Neutrapack</h1>
-    <nav>
-      <a href="#about">À propos</a>
-      <a href="#product">Produit</a>
-      <a href="#benefits">Bienfaits</a>
-      <a href="#buy">Acheter</a>
-    </nav>
+    <h1>Boostly</h1>
+    <p>L'agence marketing 360° pour booster votre notoriété digitale</p>
   </header>
 
-  <section class="hero" id="product">
-    <h2>Patch biodégradable qui neutralise les odeurs</h2>
- <img src="https://raw.githubusercontent.com/AKblackmamba/neutrapack/main/image.png" alt="Neutrapack" style="width: 180px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin: 1rem auto; display: block;">
+  <nav>
+    <a href="#projet">Projet</a>
+    <a href="#equipe">Équipe</a>
+    <a href="#objectifs">Objectifs</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="projet">
+    <h2>Notre projet</h2>
+    <p>Boostly est une agence de marketing créée par des étudiants d’EM Lyon spécialisés en marketing, communication digitale et développement web. Elle a pour mission d'accompagner les grandes entreprises dans l’optimisation de leur présence en ligne grâce à une approche 360°.</p>
   </section>
 
-  <section class="cart" id="buy">
-    <h2>Commander maintenant</h2>
-    <p>Prix : 2€ par patch<br>Livraison offerte à partir de 35€</p>
-    <label for="quantity">Quantité :</label>
-    <input type="number" id="quantity" value="1" min="1" onchange="updateCart()" />
-    <p>Total : <span id="total">6.99 €</span></p>
-    <button onclick="sendOrderEmail()">Commander par Email</button>
-
-    <!-- PayPal Payment Form -->
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="votreadressepaypal@example.com">
-      <input type="hidden" name="item_name" value="Neutrapack - Patch anti-odeur">
-      <input type="hidden" name="currency_code" value="EUR">
-      <input type="hidden" id="paypalAmount" name="amount" value="6.99">
-      <button type="submit">Payer avec PayPal</button>
-    </form>
+  <section class="section" id="equipe">
+    <h2>L'équipe</h2>
+    <div class="team-member"><strong>Blanche Marchal</strong> : KPIs, stratégie marketing, data, finance</div>
+    <div class="team-member"><strong>Daniel Razafindrabe</strong> : développement du site web</div>
+    <div class="team-member"><strong>Anthony El Khoury</strong> : UX/UI (Figma), contenus, KPIs</div>
+    <div class="team-member"><strong>Jean Miri Laurent</strong> : stratégie, organisation, CRM</div>
+    <div class="team-member"><strong>Roméo Medina</strong> : relation client, prospection, fidélisation</div>
+    <div class="team-member"><strong>Alexandre Dubosc</strong> : stratégie communication, réseaux sociaux</div>
   </section>
 
-  <section class="section" id="about">
-    <h2>À propos de Neutrapack</h2>
-    <p>Neutrapack est un patch écologique à base de marc de café recyclé, conçu pour absorber les mauvaises odeurs naturellement, sans produits chimiques.</p>
-  </section>
-
-  <section class="section" id="benefits">
-    <h2>Pourquoi choisir Neutrapack ?</h2>
-    <ul style="max-width: 600px; margin: auto; text-align: left;">
-      <li>100% biodégradable</li>
-      <li>Sans produits toxiques</li>
-      <li>Économie circulaire & zéro déchet</li>
-      <li>Simple à utiliser : il suffit de le déposer dans votre poubelle</li>
+  <section class="section" id="objectifs">
+    <h2>Objectifs</h2>
+    <ul>
+      <li>Créer une agence marketing spécialisée dans la création d'entreprise</li>
+      <li>Définir un business model et un business plan</li>
+      <li>Optimiser la notoriété et la stratégie digitale des clients</li>
+      <li>Gérer efficacement la relation client</li>
+    </ul>
+    <h3>KPIs prévisionnels :</h3>
+    <ul>
+      <li>Délai de rendu : 7 jours d’avance</li>
+      <li>Satisfaction parties prenantes : 10/10</li>
+      <li>Seuil de rentabilité : 3 mois maximum</li>
     </ul>
   </section>
 
-  <section class="section" id="confirmation" style="display:none">
-    <h2>Merci pour votre commande !</h2>
-    <p>Nous vous enverrons un e-mail de confirmation sous peu.</p>
+  <section class="section" id="services">
+    <h2>Nos services</h2>
+    <ul>
+      <li>Conception et optimisation de sites web performants</li>
+      <li>Développement de stratégies marketing (SEO, réseaux sociaux, influence)</li>
+      <li>Création de contenus TikTok, Reels avec storytelling</li>
+      <li>Gestion de l’image de marque et présence digitale</li>
+      <li>Analyse de performance via KPIs et reporting</li>
+    </ul>
+    <a class="btn" href="mailto:hello@boostly.fr?subject=Demande%20de%20rendez-vous">Prendre rendez-vous</a>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1606761568486-c2fe8b3104ba?auto=format&fit=crop&w=400&q=80" alt="Projet 1">
+        <h3>Refonte site web PME</h3>
+        <p>Optimisation UX, SEO et conversion pour une entreprise B2B</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
+        <h3>Stratégie TikTok pour une marque de mode</h3>
+        <p>Storytelling vidéo et campagne influence</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" alt="Projet 3">
+        <h3>Audit digital pour start-up éthique</h3>
+        <p>Audit site + branding + campagnes sociales</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Nous contacter</h2>
+    <form action="mailto:hello@boostly.fr" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <input type="submit" value="Envoyer">
+    </form>
   </section>
 
   <footer>
-    &copy; 2025 Neutrapack. Tous droits réservés. | Contact : hello@neutrapack.com
+    &copy; 2025 Boostly - Tous droits réservés | Projet Makers EM Lyon
   </footer>
-
-  <script>
-    updateCart();
-  </script>
 </body>
 </html>
