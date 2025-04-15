@@ -1,95 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boostly - Agence Marketing Digitale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #2F80ED;
+      --secondary: #56CCF2;
+      --bg: #F9FAFB;
+      --text: #1F2937;
+      --dark: #0F172A;
+    }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
     }
     header {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      background-color: var(--dark);
       color: white;
+      padding: 3rem 2rem;
       text-align: center;
-      padding: 4rem 2rem;
-      background-image: url('A_professional_digital_photograph_captures_a_moder.png');
-      background-size: cover;
-      background-position: center;
       position: relative;
     }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(15, 23, 42, 0.75);
-      z-index: 1;
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 2;
+    header img.logo {
+      width: 120px;
+      margin-bottom: 1rem;
     }
     header h1 {
-      font-size: 3.2rem;
-      margin: 0;
-      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      margin: 0.5rem 0;
     }
     header p {
-      font-size: 1.3rem;
-      margin-top: 1rem;
+      font-size: 1.2rem;
       color: #cbd5e1;
     }
     nav {
-      background: #1e293b;
-      text-align: center;
+      background-color: var(--primary);
       padding: 1rem 0;
+      text-align: center;
     }
     nav a {
-      color: #f1f5f9;
+      color: white;
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      font-weight: 600;
+      transition: color 0.3s;
     }
     nav a:hover {
-      color: #38bdf8;
+      color: var(--secondary);
     }
     .section {
-      padding: 3rem 1.5rem;
+      padding: 3rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
     .section h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #1e1e1e;
       text-align: center;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 1rem;
     }
     .card {
-      background: #fff;
+      background: white;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
     }
     .team-member {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     .btn {
       display: inline-block;
-      padding: 0.8rem 1.6rem;
-      background-color: #1e293b;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary);
       color: white;
-      border-radius: 8px;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: var(--secondary);
     }
     .portfolio-grid {
       display: grid;
@@ -101,13 +98,12 @@
       background: white;
       padding: 1rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       text-align: center;
     }
     .portfolio-item img {
       width: 100%;
       border-radius: 8px;
-      margin-bottom: 0.5rem;
     }
     form {
       display: flex;
@@ -117,30 +113,32 @@
       margin: auto;
     }
     input, textarea {
-      padding: 0.8rem;
+      padding: 0.75rem;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 1rem;
     }
     input[type="submit"] {
-      background-color: #1e293b;
+      background-color: var(--primary);
       color: white;
       font-weight: bold;
       cursor: pointer;
+      border: none;
     }
     footer {
-      background: #eee;
+      background: var(--dark);
+      color: #cbd5e1;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="A_logo_for_a_digital_marketing_agency_named_\"Boost.png" alt="Boostly Logo" class="logo">
     <h1>Boostly</h1>
-    <p>L'agence marketing 360° pour booster votre notoriété digitale</p>
+    <p>L’agence marketing 360° pour booster votre notoriété digitale</p>
   </header>
 
   <nav>
@@ -155,46 +153,38 @@
   <section class="section" id="projet">
     <div class="card">
       <h2>Notre projet</h2>
-      <p>Boostly est une agence marketing fondée par des étudiants d’EM Lyon spécialisés en stratégie digitale, développement web et branding. Notre mission est claire : <strong>booster la visibilité des entreprises</strong> à travers une approche 360° combinant création de sites, réseaux sociaux, influence et performance.</p>
+      <p>Boostly est une agence de marketing fondée par des étudiants d’EM Lyon. Elle accompagne les entreprises dans leur développement digital grâce à une approche 360° : branding, réseaux sociaux, création de site et analyse des performances.</p>
     </div>
   </section>
 
   <section class="section" id="equipe">
     <div class="card">
       <h2>L'équipe</h2>
-      <div class="team-member"><strong>Blanche Marchal</strong> – KPIs, stratégie marketing, data, finance</div>
-      <div class="team-member"><strong>Daniel Razafindrabe</strong> – Développement du site web</div>
-      <div class="team-member"><strong>Anthony El Khoury</strong> – UX/UI (Figma), contenus, KPIs</div>
-      <div class="team-member"><strong>Jean Miri Laurent</strong> – Organisation, stratégie, CRM</div>
-      <div class="team-member"><strong>Roméo Medina</strong> – Relation client, prospection</div>
-      <div class="team-member"><strong>Alexandre Dubosc</strong> – Communication, réseaux sociaux</div>
+      <div class="team-member"><strong>Blanche Marchal</strong> – KPIs, stratégie marketing</div>
+      <div class="team-member"><strong>Daniel Razafindrabe</strong> – Développement web</div>
+      <div class="team-member"><strong>Anthony El Khoury</strong> – UX/UI, contenus, stratégie</div>
+      <div class="team-member"><strong>Jean Miri Laurent</strong> – Organisation, CRM</div>
+      <div class="team-member"><strong>Roméo Medina</strong> – Relation client</div>
+      <div class="team-member"><strong>Alexandre Dubosc</strong> – Réseaux sociaux</div>
     </div>
   </section>
 
   <section class="section" id="objectifs">
     <h2>Objectifs</h2>
     <ul>
-      <li>Créer une agence marketing spécialisée dans la création d'entreprise</li>
-      <li>Définir un business model et un business plan</li>
-      <li>Optimiser la notoriété et la stratégie digitale des clients</li>
-      <li>Gérer efficacement la relation client</li>
-    </ul>
-    <h3>KPIs prévisionnels :</h3>
-    <ul>
-      <li>Délai de rendu : 7 jours d’avance</li>
-      <li>Satisfaction parties prenantes : 10/10</li>
-      <li>Seuil de rentabilité : 3 mois maximum</li>
+      <li>Optimiser la présence digitale</li>
+      <li>Créer un business plan solide</li>
+      <li>Développer des stratégies de contenu efficaces</li>
     </ul>
   </section>
 
   <section class="section" id="services">
     <h2>Nos services</h2>
     <ul>
-      <li>Conception et optimisation de sites web performants</li>
-      <li>Stratégies marketing (SEO, réseaux sociaux, influence)</li>
-      <li>Création de contenus TikTok, Reels avec storytelling</li>
-      <li>Branding et gestion de l’image de marque</li>
-      <li>Analyse de performance via KPIs et reporting</li>
+      <li>Sites web performants</li>
+      <li>Gestion réseaux sociaux & influence</li>
+      <li>Branding & storytelling</li>
+      <li>Analyse des performances (KPIs)</li>
     </ul>
     <a class="btn" href="mailto:hello@boostly.fr?subject=Demande%20de%20rendez-vous">Prendre rendez-vous</a>
   </section>
@@ -204,18 +194,13 @@
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <img src="A_professional_digital_photograph_captures_a_moder.png" alt="Projet 1">
-        <h3>Refonte site web PME</h3>
-        <p>Optimisation UX, SEO et conversion pour une entreprise B2B</p>
+        <h3>Refonte site PME</h3>
+        <p>Site + SEO + stratégie B2B</p>
       </div>
       <div class="portfolio-item">
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
-        <h3>Stratégie TikTok pour une marque de mode</h3>
-        <p>Storytelling vidéo et campagne influence</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" alt="Projet 3">
-        <h3>Audit digital pour start-up éthique</h3>
-        <p>Audit site + branding + campagnes sociales</p>
+        <h3>Brand TikTok Fashion</h3>
+        <p>Storytelling & influence</p>
       </div>
     </div>
   </section>
@@ -231,7 +216,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Boostly - Tous droits réservés | Projet Makers EM Lyon
+    &copy; 2025 Boostly – Propulsé par l’équipe Makers EM Lyon
   </footer>
 </body>
 </html>
