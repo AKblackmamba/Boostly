@@ -37,18 +37,26 @@
       font-weight: bold;
     }
     .section {
-      padding: 4rem 2rem;
+      padding: 3rem 1.5rem;
       max-width: 1000px;
       margin: auto;
     }
     .section h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       color: #1e1e1e;
+      text-align: center;
     }
     .section p, .section ul {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.6;
+    }
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
     }
     .team-member {
       margin-bottom: 1rem;
@@ -125,18 +133,22 @@
   </nav>
 
   <section class="section" id="projet">
-    <h2>Notre projet</h2>
-    <p>Boostly est une agence de marketing créée par des étudiants d’EM Lyon spécialisés en marketing, communication digitale et développement web. Elle a pour mission d'accompagner les grandes entreprises dans l’optimisation de leur présence en ligne grâce à une approche 360°.</p>
+    <div class="card">
+      <h2>Notre projet</h2>
+      <p>Boostly est une agence marketing fondée par des étudiants d’EM Lyon spécialisés en stratégie digitale, développement web et branding. Notre mission est claire : <strong>booster la visibilité des entreprises</strong> à travers une approche 360° combinant création de sites, réseaux sociaux, influence et performance.</p>
+    </div>
   </section>
 
   <section class="section" id="equipe">
-    <h2>L'équipe</h2>
-    <div class="team-member"><strong>Blanche Marchal</strong> : KPIs, stratégie marketing, data, finance</div>
-    <div class="team-member"><strong>Daniel Razafindrabe</strong> : développement du site web</div>
-    <div class="team-member"><strong>Anthony El Khoury</strong> : UX/UI (Figma), contenus, KPIs</div>
-    <div class="team-member"><strong>Jean Miri Laurent</strong> : stratégie, organisation, CRM</div>
-    <div class="team-member"><strong>Roméo Medina</strong> : relation client, prospection, fidélisation</div>
-    <div class="team-member"><strong>Alexandre Dubosc</strong> : stratégie communication, réseaux sociaux</div>
+    <div class="card">
+      <h2>L'équipe</h2>
+      <div class="team-member"><strong>Blanche Marchal</strong> – KPIs, stratégie marketing, data, finance</div>
+      <div class="team-member"><strong>Daniel Razafindrabe</strong> – Développement du site web</div>
+      <div class="team-member"><strong>Anthony El Khoury</strong> – UX/UI (Figma), contenus, KPIs</div>
+      <div class="team-member"><strong>Jean Miri Laurent</strong> – Organisation, stratégie, CRM</div>
+      <div class="team-member"><strong>Roméo Medina</strong> – Relation client, prospection</div>
+      <div class="team-member"><strong>Alexandre Dubosc</strong> – Communication, réseaux sociaux</div>
+    </div>
   </section>
 
   <section class="section" id="objectifs">
@@ -159,9 +171,9 @@
     <h2>Nos services</h2>
     <ul>
       <li>Conception et optimisation de sites web performants</li>
-      <li>Développement de stratégies marketing (SEO, réseaux sociaux, influence)</li>
+      <li>Stratégies marketing (SEO, réseaux sociaux, influence)</li>
       <li>Création de contenus TikTok, Reels avec storytelling</li>
-      <li>Gestion de l’image de marque et présence digitale</li>
+      <li>Branding et gestion de l’image de marque</li>
       <li>Analyse de performance via KPIs et reporting</li>
     </ul>
     <a class="btn" href="mailto:hello@boostly.fr?subject=Demande%20de%20rendez-vous">Prendre rendez-vous</a>
@@ -171,7 +183,7 @@
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Office_team_working.jpg/800px-Office_team_working.jpg" alt="Projet 1">
+        <img src="boostly-project1.jpg" alt="Projet 1">
         <h3>Refonte site web PME</h3>
         <p>Optimisation UX, SEO et conversion pour une entreprise B2B</p>
       </div>
