@@ -1,2 +1,2 @@
-# Boostly
+# Horus
 Site e-commerce Neutrapack
