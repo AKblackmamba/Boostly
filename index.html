@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boostly - Agence Marketing Digitale</title>
+  <title>Horus - Agence Marketing Digitale</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2F80ED;
-      --secondary: #56CCF2;
-      --bg: #F9FAFB;
-      --text: #1F2937;
-      --dark: #0F172A;
+      --primary: #4B3569;
+      --secondary: #E5DFF4;
+      --bg: #F8F6F1;
+      --text: #1F1F1F;
+      --accent: #ffffff;
     }
     body {
       margin: 0;
@@ -20,43 +20,36 @@
       color: var(--text);
     }
     header {
-      background-color: var(--dark);
+      background: linear-gradient(135deg, var(--primary), #6B4E8C);
       color: white;
-      padding: 3rem 2rem;
+      padding: 5rem 2rem;
       text-align: center;
       position: relative;
-      background-image: url('./hero-background.png');
-      background-size: cover;
-      background-position: center;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(15, 23, 42, 0.75);
-      z-index: 1;
-    }
-    header img.logo {
-      width: 120px;
-      margin-bottom: 1rem;
-      position: relative;
-      z-index: 2;
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 2;
+      overflow: hidden;
     }
     header h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       margin: 0.5rem 0;
+      animation: slideFade 1s ease-out;
     }
     header p {
       font-size: 1.2rem;
-      color: #cbd5e1;
+      color: var(--secondary);
+      animation: fadeIn 2s ease-out;
+    }
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header img.logo {
+      width: 140px;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease-out;
     }
     nav {
       background-color: var(--primary);
@@ -64,37 +57,32 @@
       text-align: center;
     }
     nav a {
-      color: white;
+      color: var(--secondary);
       margin: 0 1rem;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s;
     }
     nav a:hover {
-      color: var(--secondary);
+      text-decoration: underline;
     }
     .section {
       padding: 3rem 2rem;
       max-width: 1000px;
       margin: auto;
-      position: relative;
-      z-index: 2;
     }
     .section h2 {
       font-size: 2rem;
       text-align: center;
       font-family: 'Poppins', sans-serif;
       margin-bottom: 1rem;
+      color: var(--primary);
     }
-    .card {
+    .card, .pack {
       background: white;
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
-    }
-    .team-member {
-      margin-bottom: 0.75rem;
     }
     .btn {
       display: inline-block;
@@ -107,15 +95,15 @@
       transition: background 0.3s;
     }
     .btn:hover {
-      background-color: var(--secondary);
+      background-color: #372651;
     }
-    .portfolio-grid {
+    .portfolio-grid, .packs {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
-    .portfolio-item {
+    .portfolio-item, .pack {
       background: white;
       padding: 1rem;
       border-radius: 12px;
@@ -147,8 +135,8 @@
       border: none;
     }
     footer {
-      background: var(--dark);
-      color: #cbd5e1;
+      background: var(--primary);
+      color: var(--secondary);
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
@@ -157,57 +145,44 @@
 </head>
 <body>
   <header>
-    <img src="./logo-boostly.png" alt="Boostly Logo" class="logo">
-    <h1>Boostly</h1>
-    <p>L’agence marketing 360° pour booster votre notoriété digitale</p>
+    <img src="./logo-horus.png" alt="Logo Horus" class="logo">
+    <h1>Horus</h1>
+    <p>L’agence digitale qui révèle le potentiel de votre marque</p>
   </header>
-
   <nav>
     <a href="#projet">Projet</a>
     <a href="#equipe">Équipe</a>
-    <a href="#objectifs">Objectifs</a>
     <a href="#services">Services</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#tarifs">Tarifs</a>
     <a href="#contact">Contact</a>
+    <a href="#apropos">À propos</a>
   </nav>
 
   <section class="section" id="projet">
     <div class="card">
       <h2>Notre projet</h2>
-      <p>Boostly est une agence de marketing fondée par des étudiants d’EM Lyon. Elle accompagne les entreprises dans leur développement digital grâce à une approche 360° : branding, réseaux sociaux, création de site et analyse des performances.</p>
+      <p>Horus est une agence de marketing digital spécialisée dans le branding, la communication visuelle et le développement de la présence en ligne pour les entreprises ambitieuses.</p>
     </div>
   </section>
 
   <section class="section" id="equipe">
     <div class="card">
-      <h2>L'équipe</h2>
-      <div class="team-member"><strong>Blanche Marchal</strong> – KPIs, stratégie marketing</div>
-      <div class="team-member"><strong>Daniel Razafindrabe</strong> – Développement web</div>
-      <div class="team-member"><strong>Anthony El Khoury</strong> – UX/UI, contenus, stratégie</div>
-      <div class="team-member"><strong>Jean Miri Laurent</strong> – Organisation, CRM</div>
-      <div class="team-member"><strong>Roméo Medina</strong> – Relation client</div>
-      <div class="team-member"><strong>Alexandre Dubosc</strong> – Réseaux sociaux</div>
+      <h2>Notre équipe</h2>
+      <p>Notre équipe est composée d’étudiants d’EM Lyon aux compétences variées : marketing, stratégie digitale, communication, développement web et design UX/UI.</p>
     </div>
   </section>
 
-  <section class="section" id="objectifs">
-    <h2>Objectifs</h2>
-    <ul>
-      <li>Optimiser la présence digitale</li>
-      <li>Créer un business plan solide</li>
-      <li>Développer des stratégies de contenu efficaces</li>
-    </ul>
-  </section>
-
   <section class="section" id="services">
-    <h2>Nos services</h2>
-    <ul>
-      <li>Sites web performants</li>
-      <li>Gestion réseaux sociaux & influence</li>
-      <li>Branding & storytelling</li>
-      <li>Analyse des performances (KPIs)</li>
-    </ul>
-    <a class="btn" href="mailto:hello@boostly.fr?subject=Demande%20de%20rendez-vous">Prendre rendez-vous</a>
+    <div class="card">
+      <h2>Nos services</h2>
+      <ul>
+        <li>Création de site web</li>
+        <li>Identité visuelle & branding</li>
+        <li>Stratégie réseaux sociaux</li>
+        <li>SEO & campagnes publicitaires</li>
+      </ul>
+    </div>
   </section>
 
   <section class="section" id="portfolio">
@@ -219,16 +194,55 @@
         <p>Site + SEO + stratégie B2B</p>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1581091012184-df4bd7c3d0f2?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
-        <h3>Campagne Réseaux Sociaux</h3>
-        <p>Gestion de l’influence et branding créatif</p>
+        <img src="https://images.unsplash.com/photo-1627843563098-96b388e552ff?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
+        <h3>Stratégie TikTok mode</h3>
+        <p>Storytelling vidéo et campagne d’influence</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tarifs">
+    <h2>Nos packs & tarifs</h2>
+    <div class="packs">
+      <div class="pack">
+        <h3>Pack Starter</h3>
+        <p>Idéal pour débuter sa présence en ligne.</p>
+        <ul>
+          <li>1 site vitrine</li>
+          <li>Stratégie de marque</li>
+          <li>1 mois de suivi</li>
+        </ul>
+        <strong>499€</strong><br><br>
+        <a class="btn" href="mailto:contact@horus.agency?subject=Pack Starter">Choisir ce pack</a>
+      </div>
+      <div class="pack">
+        <h3>Pack Croissance</h3>
+        <p>Pour les entreprises en phase d'expansion.</p>
+        <ul>
+          <li>Site + SEO + réseaux sociaux</li>
+          <li>Graphisme + branding</li>
+          <li>2 mois de suivi personnalisé</li>
+        </ul>
+        <strong>999€</strong><br><br>
+        <a class="btn" href="mailto:contact@horus.agency?subject=Pack Croissance">Choisir ce pack</a>
+      </div>
+      <div class="pack">
+        <h3>Pack Premium</h3>
+        <p>Solution complète pour marques ambitieuses.</p>
+        <ul>
+          <li>Audit complet</li>
+          <li>Identité visuelle + stratégie digitale</li>
+          <li>Gestion réseaux sociaux + reporting</li>
+        </ul>
+        <strong>1499€</strong><br><br>
+        <a class="btn" href="mailto:contact@horus.agency?subject=Pack Premium">Choisir ce pack</a>
       </div>
     </div>
   </section>
 
   <section class="section" id="contact">
     <h2>Nous contacter</h2>
-    <form action="mailto:hello@boostly.fr" method="POST" enctype="text/plain">
+    <form action="mailto:contact@horus.agency" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Votre nom" required>
       <input type="email" name="email" placeholder="Votre email" required>
       <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
@@ -236,8 +250,15 @@
     </form>
   </section>
 
+  <section class="section" id="apropos">
+    <div class="card">
+      <h2>À propos de Horus</h2>
+      <p>Notre agence est née d’une volonté de proposer une approche créative, humaine et stratégique du marketing digital. Nous croyons au pouvoir des marques engagées et souhaitons les accompagner dans une communication qui a du sens.</p>
+    </div>
+  </section>
+
   <footer>
-    &copy; 2025 Boostly – Propulsé par l’équipe Makers EM Lyon
+    &copy; 2025 Horus – Agence fondée par l’équipe Makers EM Lyon
   </footer>
 </body>
 </html>
