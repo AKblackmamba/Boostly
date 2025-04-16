@@ -1,264 +1,186 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horus - Agence Marketing Digitale</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horus – Agence Marketing Digitale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --primary: #4B3569;
       --secondary: #E5DFF4;
       --bg: #F8F6F1;
       --text: #1F1F1F;
-      --accent: #ffffff;
     }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
     }
+
     header {
       background: linear-gradient(135deg, var(--primary), #6B4E8C);
-      color: white;
-      padding: 5rem 2rem;
+      padding: 4rem 2rem;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
+
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
     header h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 3.5rem;
-      margin: 0.5rem 0;
-      animation: slideFade 1s ease-out;
+      font-size: 3rem;
+      margin: 0;
+      color: white;
     }
+
     header p {
-      font-size: 1.2rem;
       color: var(--secondary);
-      animation: fadeIn 2s ease-out;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
-    @keyframes slideFade {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    header img.logo {
-      width: 140px;
-      margin-bottom: 1rem;
-      animation: fadeIn 1.5s ease-out;
-    }
+
     nav {
       background-color: var(--primary);
-      padding: 1rem 0;
       text-align: center;
+      padding: 1rem;
     }
+
     nav a {
       color: var(--secondary);
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .section {
       padding: 3rem 2rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
+
     .section h2 {
+      font-family: 'Poppins', sans-serif;
       font-size: 2rem;
       text-align: center;
-      font-family: 'Poppins', sans-serif;
-      margin-bottom: 1rem;
       color: var(--primary);
     }
-    .card, .pack {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--primary);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background-color: #372651;
-    }
-    .portfolio-grid, .packs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    .packs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 2rem;
       margin-top: 2rem;
     }
-    .portfolio-item, .pack {
+
+    .pack {
+      flex: 1;
+      min-width: 280px;
       background: white;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      text-align: center;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    .portfolio-item img {
-      width: 100%;
-      border-radius: 8px;
+
+    .pack h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
+
+    .pack ul {
+      list-style: none;
+      padding-left: 0;
     }
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
+
+    .pack ul li {
+      margin-bottom: 0.5rem;
     }
-    input[type="submit"] {
-      background-color: var(--primary);
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-    }
-    footer {
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
       background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--primary);
       color: var(--secondary);
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="./logo-horus.png" alt="Logo Horus" class="logo">
+    <img src="image.png" alt="Logo Horus" />
     <h1>Horus</h1>
-    <p>L’agence digitale qui révèle le potentiel de votre marque</p>
+    <p>L’agence digitale qui révèle votre potentiel</p>
   </header>
+
   <nav>
-    <a href="#projet">Projet</a>
-    <a href="#equipe">Équipe</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#tarifs">Tarifs</a>
+    <a href="#packs">Packs</a>
     <a href="#contact">Contact</a>
-    <a href="#apropos">À propos</a>
   </nav>
 
-  <section class="section" id="projet">
-    <div class="card">
-      <h2>Notre projet</h2>
-      <p>Horus est une agence de marketing digital spécialisée dans le branding, la communication visuelle et le développement de la présence en ligne pour les entreprises ambitieuses.</p>
-    </div>
-  </section>
-
-  <section class="section" id="equipe">
-    <div class="card">
-      <h2>Notre équipe</h2>
-      <p>Notre équipe est composée d’étudiants d’EM Lyon aux compétences variées : marketing, stratégie digitale, communication, développement web et design UX/UI.</p>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="card">
-      <h2>Nos services</h2>
-      <ul>
-        <li>Création de site web</li>
-        <li>Identité visuelle & branding</li>
-        <li>Stratégie réseaux sociaux</li>
-        <li>SEO & campagnes publicitaires</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Projet 1">
-        <h3>Refonte site PME</h3>
-        <p>Site + SEO + stratégie B2B</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1627843563098-96b388e552ff?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
-        <h3>Stratégie TikTok mode</h3>
-        <p>Storytelling vidéo et campagne d’influence</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="tarifs">
+  <section class="section" id="packs">
     <h2>Nos packs & tarifs</h2>
     <div class="packs">
       <div class="pack">
-        <h3>Pack Starter</h3>
-        <p>Idéal pour débuter sa présence en ligne.</p>
+        <h3>PACK STARTER – 690 €</h3>
         <ul>
-          <li>1 site vitrine</li>
-          <li>Stratégie de marque</li>
-          <li>1 mois de suivi</li>
+          <li>✅ Site vitrine (jusqu’à 3 pages)</li>
+          <li>✅ Création Instagram & Facebook</li>
+          <li>✅ 4 publications/mois</li>
+          <li>✅ Référencement SEO de base</li>
+          <li>✅ Livraison rapide & accompagnement</li>
         </ul>
-        <strong>499€</strong><br><br>
         <a class="btn" href="mailto:contact@horus.agency?subject=Pack Starter">Choisir ce pack</a>
       </div>
+
       <div class="pack">
-        <h3>Pack Croissance</h3>
-        <p>Pour les entreprises en phase d'expansion.</p>
+        <h3>PACK CROISSANCE – 1290 €</h3>
         <ul>
-          <li>Site + SEO + réseaux sociaux</li>
-          <li>Graphisme + branding</li>
-          <li>2 mois de suivi personnalisé</li>
+          <li>✅ Site complet (5 pages ou e-commerce simple)</li>
+          <li>✅ Réseaux sociaux (8 posts/mois)</li>
+          <li>✅ Calendrier éditorial</li>
+          <li>✅ Audit SEO + suivi</li>
+          <li>✅ Rapport mensuel</li>
         </ul>
-        <strong>999€</strong><br><br>
         <a class="btn" href="mailto:contact@horus.agency?subject=Pack Croissance">Choisir ce pack</a>
       </div>
+
       <div class="pack">
-        <h3>Pack Premium</h3>
-        <p>Solution complète pour marques ambitieuses.</p>
+        <h3>OFFRE SUR-MESURE – DEVIS</h3>
         <ul>
-          <li>Audit complet</li>
-          <li>Identité visuelle + stratégie digitale</li>
-          <li>Gestion réseaux sociaux + reporting</li>
+          <li>✅ Accompagnement à la carte</li>
+          <li>✅ Stratégie personnalisée</li>
+          <li>✅ Services avancés (CRM, pub, influence)</li>
+          <li>✅ Tarification selon vos objectifs</li>
         </ul>
-        <strong>1499€</strong><br><br>
-        <a class="btn" href="mailto:contact@horus.agency?subject=Pack Premium">Choisir ce pack</a>
+        <a class="btn" href="mailto:contact@horus.agency?subject=Pack sur-mesure">Demander un devis</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Nous contacter</h2>
-    <form action="mailto:contact@horus.agency" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-      <input type="submit" value="Envoyer">
-    </form>
-  </section>
-
-  <section class="section" id="apropos">
-    <div class="card">
-      <h2>À propos de Horus</h2>
-      <p>Notre agence est née d’une volonté de proposer une approche créative, humaine et stratégique du marketing digital. Nous croyons au pouvoir des marques engagées et souhaitons les accompagner dans une communication qui a du sens.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Horus – Agence fondée par l’équipe Makers EM Lyon
+    &copy; 2025 Horus. Site conçu par l’équipe Makers EM Lyon.
   </footer>
 </body>
 </html>
