@@ -45,12 +45,20 @@
     }
     nav a {
       color: var(--secondary);
-      margin: 0 1rem;
+      margin: 0.5rem 0.8rem;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
     .section {
       padding: 3rem 2rem;
@@ -96,6 +104,7 @@
     .pack ul {
       list-style: none;
       padding-left: 0;
+      flex-grow: 1;
     }
     .pack ul li {
       margin-bottom: 0.5rem;
@@ -109,6 +118,7 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      text-align: center;
     }
     .portfolio-grid {
       display: flex;
@@ -149,6 +159,14 @@
       cursor: pointer;
       border: none;
     }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 600px;
+      border: none;
+      display: block;
+      margin: 2rem auto;
+    }
     footer {
       background-color: var(--primary);
       color: var(--secondary);
@@ -167,10 +185,10 @@
 
   <nav>
     <a href="#projet">Projet</a>
-    <a href="#equipe">Équipe</a>
-    <a href="#services">Services</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#equipe">Équipe</a>
     <a href="#packs">Packs</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
     <a href="#apropos">À propos</a>
   </nav>
@@ -179,42 +197,6 @@
     <div class="card">
       <h2>Notre projet</h2>
       <p>Horus est une agence de marketing digital spécialisée dans le branding, la communication visuelle et le développement de la présence en ligne pour les entreprises ambitieuses.</p>
-    </div>
-  </section>
-
-  <section class="section" id="equipe">
-    <div class="card">
-      <h2>Notre équipe</h2>
-      <p>Nous sommes un collectif d’étudiants d’EM Lyon aux profils complémentaires : web design, communication, stratégie marketing, branding et analyse de données. Ensemble, nous bâtissons des solutions sur mesure pour faire rayonner les entreprises.</p>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="card">
-      <h2>Nos services</h2>
-      <ul>
-        <li>Création de sites vitrines & e-commerce</li>
-        <li>Identité visuelle & branding de marque</li>
-        <li>Stratégies réseaux sociaux (TikTok, Insta...)</li>
-        <li>SEO & campagnes publicitaires</li>
-        <li>Suivi et reporting des performances</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Projet 1" />
-        <h3>Refonte site PME</h3>
-        <p>Site + SEO + stratégie B2B</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1598256989800-b8a3f56c88ba?auto=format&fit=crop&w=400&q=80" alt="Projet 2" />
-        <h3>Stratégie TikTok mode</h3>
-        <p>Storytelling vidéo et campagne d’influence</p>
-      </div>
     </div>
   </section>
 
@@ -247,7 +229,7 @@
 
       <div class="pack">
         <h3>OFFRE SUR-MESURE – DEVIS</h3>
-        <ul>
+        <ul style="flex-grow: 1;">
           <li>✅ Accompagnement à la carte</li>
           <li>✅ Stratégie personnalisée</li>
           <li>✅ Services avancés (CRM, pub, influence)</li>
@@ -266,13 +248,9 @@
       <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
       <input type="submit" value="Envoyer">
     </form>
-  </section>
 
-  <section class="section" id="apropos">
-    <div class="card">
-      <h2>À propos de Horus</h2>
-      <p>Notre agence est née d’une volonté de proposer une approche créative, humaine et stratégique du marketing digital. Nous croyons au pouvoir des marques engagées et souhaitons les accompagner dans une communication qui a du sens.</p>
-    </div>
+    <h2>Réserver un créneau</h2>
+    <iframe src="https://calendly.com/tonliencalendly" frameborder="0"></iframe>
   </section>
 
   <footer>
